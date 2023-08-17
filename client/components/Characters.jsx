@@ -13,7 +13,9 @@ class Characters extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/')
+    fetch(
+      'https://www.pathofexile.com/character-window/get-characters?accountName=RoboPen&realm=pc'
+    )
       .then((res) => res.json())
       .then((characters) => {
         if (!Array.isArray(characters)) characters = [];

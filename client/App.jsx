@@ -1,18 +1,19 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+//import { Switch, Route } from 'react-router-dom';
 
 import Characters from './components/Characters';
 
 import './stylesheets/styles.css';
 
-const App = (props) => {
+const App = () => {
   return (
     <div className='router'>
       <main>
-        <Switch>
+        {/* <Switch>
           <Route exact path='/' component={Characters} />
           <Route exact path='/load' component={LoadNew} />
-        </Switch>
+        </Switch> */}
+        <Characters />
       </main>
     </div>
   );

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Elias Toussaint Solo Project",
   "scripts": {
-    "start": "nodemon server/index.js",
-    "build": "webpack -w"
+    "start": "node server/server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
