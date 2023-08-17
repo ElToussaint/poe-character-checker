@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Characters from './components/Characters';
 
+import './stylesheets/styles.css';
+
 const App = (props) => {
   return (
     <div className='router'>

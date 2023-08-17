@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import CharacterCard from './CharacterCard';
 
@@ -38,6 +38,25 @@ class Characters extends Component {
         </div>
       );
     }
+
+    const { characters } = this.state;
+
+    if (!characters) return null;
+
+    if (!characters.length) return <div>Sorry, no characters found</div>;
+
+    const chars = characters.map((char, i) => {
+      return <CharacterCard key={i} info={char} />;
+    });
+
+    return (
+      <section className='mainSection'>
+        <header className='pageHeader'>
+          <h2>Characters</h2>
+        </header>
+        <div className='charContainer'>{chars}</div>
+      </section>
+    );
   }
 }
 
