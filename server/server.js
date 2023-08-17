@@ -1,6 +1,7 @@
-const express = require('express');
-const app = express();
 const path = require('path');
+const express = require('express');
+
+const app = express();
 
 app.use('/build', express.static(path.join(__dirname, '../build')));
 
